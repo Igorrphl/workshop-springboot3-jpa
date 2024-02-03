@@ -11,8 +11,8 @@ import com.educandoweb.course.entities.User;
 @RequestMapping(value = "/users")
 public class UserResource {
 
-	@GetMapping //responde a uma requisição do tipo Get do http
-	
+	//responde a uma requisição do tipo Get do http
+	@GetMapping 
 	
 	//endpoint para acessar os usuários
 	//ReponseEntity - Retorna resposta de requisições web
