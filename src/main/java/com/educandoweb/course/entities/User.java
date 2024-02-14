@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +30,10 @@ public class User implements Serializable {
 	private String email;
 	private String phone;
 	private String password;
+	
+	//Para evitar que o programa fique em looping infinito
+	//tabela cliente chama pedido e pedido chama cliente em looping
+	@JsonIgnore
 	
 	//OneToMany - um para muitos
 	//mappedBy - Lá do outro lado (order) está mapeado por "client"
