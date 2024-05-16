@@ -24,7 +24,7 @@ import jakarta.persistence.Table;
 public class Order implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	//informando qual é a chave primário do BD - "GeneratedValue" é informando que ela é auto-inclementável
+	//informando qual é a chave primária do BD - "GeneratedValue" é informando que ela é auto-inclementável
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -32,8 +32,8 @@ public class Order implements Serializable {
 	
 	private Integer orderStatus;
 	
-	//ManyToOne - Intruindo o JPA para uma chave estrangeira 
-	//JoinColumn - nome da chave estrangeira que vai ter nao banco de dados
+	//ManyToOne - Instruindo o JPA para uma chave estrangeira 
+	//JoinColumn - nome da chave estrangeira que vai ter no banco de dados
 	@JoinColumn(name = "cliente_id")
 	@ManyToOne
 	private User client;
